@@ -1,4 +1,4 @@
-ls -la<?php
+<?php
 
 include 'variables.php';
 
