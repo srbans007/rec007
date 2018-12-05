@@ -1,0 +1,3 @@
+/opt/lampp/bin/mysql -u root
+
+/opt/lampp/bin/php (init o las weas que hagan falta)

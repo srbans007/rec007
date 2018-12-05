@@ -1,0 +1,10 @@
+Cambiar IP
+Select * from wp_options where option_name IN('siteurl','home'); 
+
+
+
+update wp_options set option_value='http://bansic.ddns.net' where option_name = 'siteurl';
+
+
+
+update wp_options set option_value='http://bansic.ddns.net' where option_name = 'home';

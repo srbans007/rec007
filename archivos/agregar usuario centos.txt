@@ -1,0 +1,2 @@
+useradd usuario
+passwd usuario
