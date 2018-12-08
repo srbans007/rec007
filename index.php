@@ -62,14 +62,15 @@ include 'variables.php';
             <textarea class="summernote" id="summernote" name="editordata"></textarea>
             <input class="form-control" type="text" name="nArch" placeholder="Nombre de archivo: (nombre.txt nombre.html, nombre.htm etc...)"><br>
             <input type="submit" class='btn btn-success' value="Crear Archivo">
-        </form><br>
-
+        </form>
+        <hr style="border-color:red;"><br>
         <!-- Listado de busqueda -->
         <form action="pag4.php" method="post">
         <table id="tabledt" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Última modificación</th>
                     <th>Acción</th>
                 </tr>
             </thead>
@@ -79,10 +80,12 @@ include 'variables.php';
             <tfoot>
             <tr>
                 <th>Nombre</th>
+                <th>Última modificación</th>
                 <th>Acción</th>
             </tr>
         </tfoot>
         </table>
+        <hr style="border-color:red;">
         </form>
     </div>
   </body>
