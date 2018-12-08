@@ -8,9 +8,12 @@ include 'variables.php';
     <head>
         <meta charset="utf-8">
         <!-- include libraries(jQuery, bootstrap, summernote) -->
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <script src="js/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <script src="js/bootstrap.js"></script>
+        <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
         <link href="dist/summernote.css" rel="stylesheet">
         <script src="dist/summernote.js"></script>
         <script>$(document).ready(function() {
@@ -43,8 +46,13 @@ include 'variables.php';
         });
         }
         </script>
-        <!-- include quicksearch -->
-        <script src="js/jquery.quicksearch.js"></script>
+        <!-- include datatable -->
+        <script>
+            $(document).ready(function() {
+            $('#tabledt').DataTable();
+          } );
+        </script>
+
     </head>
     <body>
     <div class="container-fluid">
@@ -56,12 +64,9 @@ include 'variables.php';
             <input type="submit" class='btn btn-success' value="Crear Archivo">
         </form><br>
 
-        <!-- Barra de busqueda -->
-        <input class="form-control" name="query" id="txt_query" placeholder="Busque aquí su archivo" type="text"><p>
-
         <!-- Listado de busqueda -->
         <form action="pag4.php" method="post">
-        <table class="table" id="table">
+        <table id="tabledt" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -71,7 +76,12 @@ include 'variables.php';
             <tbody>
                 <?php include 'listar.php'; ?>
             </tbody>
-            <script>$('input#txt_query').quicksearch('table#table tbody tr');</script>
+            <tfoot>
+            <tr>
+                <th>Nombre</th>
+                <th>Acción</th>
+            </tr>
+        </tfoot>
         </table>
         </form>
     </div>
