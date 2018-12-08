@@ -61,7 +61,6 @@ include 'variables.php';
 
         <!-- Listado de busqueda -->
         <form action="pag4.php" method="post">
-
         <table class="table" id="table">
             <thead>
                 <tr>
