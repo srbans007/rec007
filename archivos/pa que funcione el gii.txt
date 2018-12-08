@@ -1,4 +1,0 @@
-$config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        'allowedIPs' => ['*'],
-    ];

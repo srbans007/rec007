@@ -1,3 +1,0 @@
-luego de crear el usuario y asignar el password entrar al archivo 
-
-/etc/sudoers

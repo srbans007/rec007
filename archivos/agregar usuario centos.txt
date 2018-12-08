@@ -1,2 +1,0 @@
-useradd usuario
-passwd usuario
